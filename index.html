@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <title>Chef</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<head>
+    <style> 
+    #myDIV {
+      border: 1px solid black;
+      width: 400px;
+      height: 100px;
+      animation: mymove 5s infinite;
+    }
+    
+    @keyframes mymove {
+      50% {font-size: 40px;}
+    }
+    </style>
+    </head> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="stylesheet.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="index.html">Chef</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Chef</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<script>
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+</body>
+</html>
+
+    <div class="ParallaxVideo">
+        <video autoplay muted loop>
+        <source src="https://videos.pexels.com/video-files/3192257/3192257-uhd_2560_1440_25fps.mp4" type="video/mp4">
+        </video>
+        <div id="titletext">
+            <h1></h1>
+        <div id="undertitle">
+            <p></p>
+        </div>
+        </div>
+      </div>
+
+<body>
+    <h1>HOME</h1>
+</body>
+
+    <div id="features" >
+        <div class="wrapper">
+        <div class="background">
+            <ul>
+                <li class="feature-1">
+                    <img src="images/icon.png" width="150" height="170" style="padding-bottom: 20px;" alt="icon">
+                    <h4>Stainless Steel</h4>
+                    <p>Stainless steel allows for an always clean knife and a smooth cut, <strong style="color: #e05e5e;">everytime.</strong></p>
+                </li>
+                <li class="feature-2" style="padding-left: 100px;">
+                    <img src="images/icon2.png" width="150" height="170" style="padding-bottom: 20px;" alt="icon">
+                    <h4>Top Quality Materials</h4>
+                    <p>Our knives are always made with only the best materials, <strong style="color: #e05e5e;">guaranteed.</strong></p>
+                </li>
+                <li class="feature-3" style="padding-left: 100px;">
+                    <img src="images/icon3.png" width="150" height="170" style="padding-bottom: 20px;" alt="icon">
+                    <h4>Made to Last</h4>
+                    <p >Our knives are tested extensively and thoroughly to handle every cooking need, <strong style="color: #e05e5e;">always.</strong></p>
+                </li>
+            </ul>
+            
+        </div>
+        </div>
+    </div>
+    
+    <div id="primary-content" style="padding-right: 75px;">
+        <div class="wrapper" style="padding-top: 500px;">
+        <div class="grow">
+            <article>
+                <h3>Demo Video</h3>
+                <p>A cutting demo video showcasing proper knife form and our top-quality knives. </p>
+                <iframe width="820" height="540" src="https://www.youtube.com/embed/G-Fg7l7G1zw?si=VzItGvEOGsqQG_zP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </video>
+            </article>
+        </div>
+        </div>
+    </div>
+
+    <div id="secondary-content">
+        <div class="wrapper" style="padding-left: 980px;">
+            <article style="background-image: url('images/article-image-1.jpg');">
+                <div class="overlay">
+                    <h4>WE DO REPAIRS</h4>
+                    <p><small>Need to fix or polish a knife? We got you.</small></p>
+                    <a href="services.html" class="more-link">CLICKY HERE</a>
+                </div>
+            </article>
+            <article style="background-image: url('images/article-image-2.jpg');">
+                <div class="overlay">
+                    <h4>WE SELL KNIVES</h4>
+                    <p><small>Need a shiny new knife? We got you.</small></p>
+                    <a href="shop.html" class="more-link">HERE CLICK</a>
+                </div>
+            </article>
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <div id="cta">
+        <div class="wrapper">
+        <div class="backgrounded">
+            <h3>Heard Enough?</h3>
+            <p>Click <a href="shop.html" id="myDIV">HERE</a> to buy.</p>
+            <a href="#" class="button-2">Get Started</a>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
